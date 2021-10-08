@@ -101,6 +101,8 @@ public class Vehiculo implements GestionVehiculo{
 	@Override
 	public boolean acelerar(float incremento) {
 		// TODO Auto-generated method stub
+	
+       
 		if (this.estaArrancado= true) {
 			this.velocidadActual+= incremento;
 			this.estaArrancado= true;
@@ -108,7 +110,8 @@ public class Vehiculo implements GestionVehiculo{
 		}else {
 			this.estaArrancado= false;
 			return false;
-			}
+		}
+		
 	}
 	
 	@Override
