@@ -1,5 +1,7 @@
 package Productos;
 
+import Edificios.Edificio;
+
 public class Producto {
 
 	protected int id;
@@ -8,7 +10,7 @@ public class Producto {
 	protected float profundidad;
 	protected float altura;
 	protected String color;
-	protected String edificioActual;
+	protected Edificio edificioActual;
 	
 	public Producto() {
 		this.id= 0;
@@ -70,15 +72,14 @@ public class Producto {
 		this.color = color;
 	}
 
-	public String getEdificioActual() {
+	public Edificio getEdificioActual() {
 		return edificioActual;
 	}
 
-	public void setEdificioActual(String edificioActual) {
+	public void setEdificioActual(Edificio edificioActual) {
 		this.edificioActual = edificioActual;
 	}
-	
-	
+
 	public String print() {
 		String infoProducto= "";
 		infoProducto +="\n Id: " + id;

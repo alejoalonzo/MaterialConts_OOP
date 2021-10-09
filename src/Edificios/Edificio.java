@@ -10,6 +10,7 @@ public abstract class Edificio {
 		protected float precioMercado;
 		protected String color;
 		
+		
 		//Builders---------------------------------
 		public Edificio(){
 			this.tipo = "";

@@ -24,11 +24,12 @@ public class Empresa {
 	protected Producto silla1;
 	protected Producto silla2;
 	
+	
 	public Empresa() {
 		this.electrico1 = new Electrico();
 		this.electrico2 = new Electrico();
 		this.gasolina1 = new Gasolina();
-		this.diessel1 = new Gasoil();
+		this.diessel1 = new Gasoil(nombre, 0, false, 0, 0, nombre, 0);
 		
 		this.oficina1 = new Oficina();
 		this.almacen1 = new Almacen();
@@ -161,11 +162,92 @@ public class Empresa {
 	
 	
 	
+	
+	
 	public String print() {
 		return this.nombre + "\n" + electrico1.print() + "\n" + electrico2.print() + "\n" + gasolina1.print() +
 				"\n" + diessel1.print() + "\n" + oficina1.print() + "\n" + almacen1.print() + "\n" + fabrica1.print() + 
 				"\n" + puerta1.print() + "\n" +  puerta2.print() + "\n" + ventana1.print() + "\n" + ventana2.print() +
 				"\n" + silla1.print() + "\n" + silla2.print();
 	}
+	
+	
+
+	public boolean crearProducto(Producto pro) {
+		// TODO Auto-generated method stub
+		
+		if ( puerta1 == null || puerta1.getId() != pro.getId() || puerta1.getId() <7) {
+			puerta1 = pro;
+			System.out.println("Puerta creada");
+			return true;	
+		}else if ( puerta2 == null || puerta2.getId() != pro.getId() || puerta1.getId() <7) {
+			puerta2 = pro;
+			System.out.println("Puerta creada");
+			return true;	
+		}else if ( silla1 == null || silla1.getId() != pro.getId() || puerta1.getId() <7) {
+			silla1 = pro;
+			System.out.println("Silla creada");
+			return true;	
+		}else if ( silla2 == null || silla2.getId() != pro.getId() || puerta1.getId() <7) {
+			silla2 = pro;
+			System.out.println("Silla creada");
+			return true;
+		}else if ( ventana1 == null || ventana1.getId() != pro.getId() || puerta1.getId() <7) {
+			ventana1 = pro;
+			System.out.println("ventana creada");
+			return true;	
+		}else if ( ventana2 == null || ventana2.getId() != pro.getId() || puerta1.getId() <7) {
+			ventana2 = pro;
+			System.out.println("ventana creada");
+			return true;
+		}else {
+			
+			System.out.println("No se ha podido crear el producto");
+			return false;	
+		}
+			
+		
+	}
+
+	
+	public boolean venderProducto(Producto pro) {
+		// TODO Auto-generated method stub
+		if(puerta1.getId() == pro.getId()) {
+			puerta1 = null;
+			System.out.println("Puerta vendida");
+			return  true;
+		}else if(puerta2.getId() == pro.getId()) {
+			puerta2 = null;
+			System.out.println("Puerta vendida");
+			return  true;
+		}else if(silla1.getId() == pro.getId()) {
+			silla1 = null;
+			System.out.println("Silla vendida");
+			return  true;
+		}else if(silla2.getId() == pro.getId()) {
+			silla2 = null;
+			System.out.println("Silla vendida");
+			return  true;
+		}else if(ventana1.getId() == pro.getId()) {
+			ventana1 = null;
+			System.out.println("Ventana vendida");
+			return  true;
+		}else if(ventana2.getId() == pro.getId()) {
+			ventana2 = null;
+			System.out.println("Ventana vendida");
+			return  true;
+		}
+		
+		System.out.println("No se ha podido vender el producto");
+		return false;
+	}
+	
+	
+	//FALTA ULTIMA FUNCION DE CAMMBIAR EL PRODUCTO DE EFICIO
+	
+//	public boolean cambiarUbicacionProducto(Producto pro, Edificio edi) {
+//	// TODO Auto-generated method stub
+//		
+//	}
 	
 }
