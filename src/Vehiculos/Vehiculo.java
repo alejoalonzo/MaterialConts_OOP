@@ -83,15 +83,15 @@ public class Vehiculo implements GestionVehiculo{
 	//Own methods--------------------------------------------
 	
 	public String print() {
-		String info= "";
-		info +="\n Marca: " + marca;
-		info +="\n Velocidad actual: " + velocidadActual;
-		info +="\n Está arrancado: " + estaArrancado;
-		info +="\n Precio: " + precio;
-		info +="\n Peso: " + peso;
-		info +="\n Color: " + color;
+		String infoVehiculo= "";
+		infoVehiculo +="\n Marca: " + marca;
+		infoVehiculo +="\n Velocidad actual: " + velocidadActual;
+		infoVehiculo +="\n Está arrancado: " + estaArrancado;
+		infoVehiculo +="\n Precio: " + precio;
+		infoVehiculo +="\n Peso: " + peso;
+		infoVehiculo +="\n Color: " + color;
 		
-		return info;
+		return infoVehiculo;
 		
 	}
 	
@@ -148,11 +148,7 @@ public class Vehiculo implements GestionVehiculo{
 		}
 	}
 	
+	
 	//-------------------------------------------------------------------------------
-
-	
-	
-	
-	
 	
 }

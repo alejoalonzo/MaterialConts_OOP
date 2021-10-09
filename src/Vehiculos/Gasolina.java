@@ -35,6 +35,12 @@ public class Gasolina extends Vehiculo {
 		this.tammanyoDeposito = tammanyoDeposito;
 	}
 	
+	@Override
+	public String print() {
+		return super.print() + "Contaminacion: " + this.contaminacion + "Tamaño de deposito: " + this.tammanyoDeposito;
+	}
 	
+	
+
 
 }

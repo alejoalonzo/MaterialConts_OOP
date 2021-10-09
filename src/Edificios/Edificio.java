@@ -120,4 +120,19 @@ public abstract class Edificio {
 		
 		public abstract void funcionalidadEdificio();
 		
+		
+		public String print() {
+			String infoEdificio= "";
+			infoEdificio +="\n Tipo: " + tipo;
+			infoEdificio +="\n Anchura: " + anchura;
+			infoEdificio +="\n Altura: " + altura;
+			infoEdificio +="\n Profundidad: " + profundidad;
+			infoEdificio +="\n Material: " + material;
+			infoEdificio +="\n Precio de mercado: " + precioMercado;
+			infoEdificio +="\n Color: " + color;
+			
+			return infoEdificio;
+			
+		}
+		
 }

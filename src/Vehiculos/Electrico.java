@@ -29,6 +29,11 @@ public class Electrico extends Vehiculo {
 	}
 	
 	
+	public String print() {
+		return super.print() + "Potencia: " + this.potencia + "Velocidad maxima: " +this.velocidadMaxima;
+	}
+	
+	
 }
 	
 	

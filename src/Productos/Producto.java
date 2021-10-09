@@ -79,6 +79,19 @@ public class Producto {
 	}
 	
 	
+	public String print() {
+		String infoProducto= "";
+		infoProducto +="\n Id: " + id;
+		infoProducto +="\n Nombre: " + nombre;
+		infoProducto +="\n Anchura: " + anchura;
+		infoProducto +="\n Profundidad: " + profundidad;
+		infoProducto +="\n Altura: " + altura;
+		infoProducto +="\n Color: " + color;
+		
+		return infoProducto;
+		
+	}
 	
+	//Falta funcion para saber en que edificio esta el producto
 	
 }
