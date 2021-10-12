@@ -4,7 +4,7 @@ import Vehiculos.*;
 import Edificios.*;
 import Productos.*;
 
-public class Empresa {
+public class Empresa{
 	
 	protected String nombre;
 
@@ -31,16 +31,16 @@ public class Empresa {
 		this.gasolina1 = new Gasolina();
 		this.diessel1 = new Gasoil(nombre, 0, false, 0, 0, nombre, 0);
 		
-		this.oficina1 = new Oficina();
-		this.almacen1 = new Almacen();
-		this.fabrica1 = new Fabrica();
+		this.oficina1 = new Oficina(nombre, 0, 0, 0, nombre, 0, nombre);
+		this.almacen1 = new Almacen(nombre, 0, 0, 0, nombre, 0, nombre);
+		this.fabrica1 = new Fabrica(nombre, 0, 0, 0, nombre, 0, nombre);
 		
-		this.puerta1 = new Puertas();
-		this.puerta2 = new Puertas();
-		this.ventana1 = new Ventanas();
-		this.ventana2 = new Ventanas();
-		this.silla1 = new Sillas();
-		this.silla2 = new Sillas();
+		this.puerta1 = new Puertas(0, nombre, 0, 0, 0, nombre, almacen1);
+		this.puerta2 = new Puertas(0, nombre, 0, 0, 0, nombre, almacen1);
+		this.ventana1 = new Ventanas(0, nombre, 0, 0, 0, nombre, almacen1);
+		this.ventana2 = new Ventanas(0, nombre, 0, 0, 0, nombre, almacen1);
+		this.silla1 = new Sillas(0, nombre, 0, 0, 0, nombre, almacen1);
+		this.silla2 = new Sillas(0, nombre, 0, 0, 0, nombre, almacen1);
 		
 		this.nombre = "Mi empresa";
 	}
@@ -208,6 +208,16 @@ public class Empresa {
 			
 		
 	}
+	
+	
+//	public boolean crearProducto(Producto p) {
+//        if(p.getAltura()==0 && p.getAnchura()==0 && p.getProfundidad() ==0 && p.getId()==0) {
+//            return true;
+//        }
+//        else {
+//            return false;
+//        }
+//    }
 
 	
 	public boolean venderProducto(Producto pro) {
@@ -227,7 +237,7 @@ public class Empresa {
 		}else if(silla2.getId() == pro.getId()) {
 			silla2 = null;
 			System.out.println("Silla vendida");
-			return  true;
+			return  true; 
 		}else if(ventana1.getId() == pro.getId()) {
 			ventana1 = null;
 			System.out.println("Ventana vendida");

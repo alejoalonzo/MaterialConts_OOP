@@ -2,7 +2,7 @@ package Productos;
 
 import Edificios.Edificio;
 
-public class Producto {
+public class Producto{
 
 	protected int id;
 	protected String nombre;
@@ -22,6 +22,18 @@ public class Producto {
 		this.edificioActual= null;
 				
 	}
+	public Producto(int ide, String name, float anch, float profu, float al, String color, Edificio edi) {
+		this.id= ide;
+		this.nombre= name;
+		this.anchura= anch;
+		this.profundidad= profu;
+		this.altura= al;
+		this.color= color;
+		this.edificioActual= edi;
+				
+	}
+	
+	
 	
 	//Getters & Setters---------------------------------------
 	public int getId() {
@@ -93,6 +105,6 @@ public class Producto {
 		
 	}
 	
-	//Falta funcion para saber en que edificio esta el producto
+
 	
 }

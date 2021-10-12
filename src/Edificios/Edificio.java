@@ -23,13 +23,13 @@ public abstract class Edificio {
 			
 		}//Builder overload
 		public Edificio(String tip,	float anch, float al, float profu, String mater, float prMkt, String color) {
-			this.tipo = "";
-			this.anchura = 0.0f;
-			this.altura = 0.0f;
-			this.profundidad = 0.0f;
-			this.material = "";
-			this.precioMercado= 0.0f;
-			this.color = "";
+			this.tipo = tip;
+			this.anchura = anch;
+			this.altura = al;
+			this.profundidad = profu;
+			this.material = mater;
+			this.precioMercado= prMkt;
+			this.color = color;
 			
 		}
 		
@@ -83,7 +83,6 @@ public abstract class Edificio {
 		public float costePintura(String color, float precioMetro) {
 			float coste;
 			coste = precioMetro * this.altura * this.anchura * this.profundidad;
-			
 			if(coste <= 0) {
 				return -1;
 			}else {
@@ -92,7 +91,7 @@ public abstract class Edificio {
 		}
 		
 		
-		public float costePintura(String color, float precioMetro, String lado) {
+		public float costePinturaPorLado(String color, float precioMetro, String lado) {
 			
 			String ladoAnchura="ladoAnchura", ladoProfundidad="ladoProfundidad";
 			float coste;
