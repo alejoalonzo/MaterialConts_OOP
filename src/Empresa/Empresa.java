@@ -205,45 +205,35 @@ public class Empresa{
 			System.out.println("No se ha podido crear el producto");
 			return false;	
 		}
-			
-		
+				
 	}
 	
 	
-//	public boolean crearProducto(Producto p) {
-//        if(p.getAltura()==0 && p.getAnchura()==0 && p.getProfundidad() ==0 && p.getId()==0) {
-//            return true;
-//        }
-//        else {
-//            return false;
-//        }
-//    }
 
-	
 	public boolean venderProducto(Producto pro) {
 		// TODO Auto-generated method stub
 		if(puerta1.getId() == pro.getId()) {
-			puerta1 = null;
+			pro = null;
 			System.out.println("Puerta vendida");
 			return  true;
 		}else if(puerta2.getId() == pro.getId()) {
-			puerta2 = null;
+			pro = null;
 			System.out.println("Puerta vendida");
 			return  true;
 		}else if(silla1.getId() == pro.getId()) {
-			silla1 = null;
+			pro = null;
 			System.out.println("Silla vendida");
 			return  true;
 		}else if(silla2.getId() == pro.getId()) {
-			silla2 = null;
+			pro = null;
 			System.out.println("Silla vendida");
 			return  true; 
 		}else if(ventana1.getId() == pro.getId()) {
-			ventana1 = null;
+			pro = null;
 			System.out.println("Ventana vendida");
 			return  true;
 		}else if(ventana2.getId() == pro.getId()) {
-			ventana2 = null;
+			pro = null;
 			System.out.println("Ventana vendida");
 			return  true;
 		}
@@ -253,11 +243,18 @@ public class Empresa{
 	}
 	
 	
-	//FALTA ULTIMA FUNCION DE CAMMBIAR EL PRODUCTO DE EFICIO
 	
-//	public boolean cambiarUbicacionProducto(Producto pro, Edificio edi) {
-//	// TODO Auto-generated method stub
-//		
-//	}
+	public boolean cambiarUbicacionDeProducto(Producto pro, Edificio edi) {
+		// TODO Auto-generated method stub
+		if(pro.getId() == puerta1.getId() || pro.getId() == puerta2.getId() || pro.getId() == silla1.getId() || pro.getId() == silla2.getId()
+		|| pro.getId() == ventana1.getId() || pro.getId() == ventana2.getId()) {
+				pro.setEdificioActual(edi);
+		}
+		System.out.println("Se ha cambiado la ubicación del preoducto a: " + edi);
+		return true;
+	}
+	
+	
+
 	
 }

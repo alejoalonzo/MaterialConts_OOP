@@ -63,6 +63,8 @@ public class Start {
 		Producto si2 = new Sillas(4, "Silla comedor", 0.6f, 0.5f, 1.2f, "Marron",  edi1);
 		Producto ven1 = new Ventanas(5, "Ventana salón", 0.6f, 0.1f, 0.6f, "Marron",  edi1);
 		Producto ven2 = new Ventanas(6, "Ventana salón", 0.6f, 0.1f, 0.6f, "Marron",  edi1);
+		Producto puer3 = new Puertas(2, "Puerta salón", 1.2f, 0.1f, 2.2f, "Blanco", edi1);
+		Producto puer4 = new Puertas(10, "Puerta salón", 1.2f, 0.1f, 2.2f, "Blanco", edi1);
 		
 		miEmpresa.setPuerta1(puer1);
 		miEmpresa.setPuerta2(puer2);
@@ -71,14 +73,16 @@ public class Start {
 		miEmpresa.setVentana1(ven1);
 		miEmpresa.setVentana2(ven2);
 		
-
+		miEmpresa.venderProducto(puer1);
+		miEmpresa.venderProducto(si1);
+		miEmpresa.crearProducto(puer3);
+		miEmpresa.crearProducto(puer4);
 		
+		miEmpresa.cambiarUbicacionDeProducto(puer4, edi2);
 		
-		System.out.println(miEmpresa.print());
-		
-		
-		
-		//System.out.println("MI EMPRESA: " + miEmpresa.print());
+		System.out.println();
+		System.out.println();
+		System.out.println(">>>>>>>>>>>>" + miEmpresa.print());
 		
 	}
 
